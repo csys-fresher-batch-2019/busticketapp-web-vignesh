@@ -37,6 +37,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
+	<dependency>
+		
+		<groupId>${project.parent.groupId}</groupId>
+		<artifactId>busticketapp-core</artifactId>
+		<version>${project.parent.version}</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>busticketapp-web</finalName>
