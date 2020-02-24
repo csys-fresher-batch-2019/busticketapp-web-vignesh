@@ -14,7 +14,7 @@ public class ServiceBusTicket {
 	//static Jdbi jdbi=ConnectionUtil.getJdbi();
 	//static BusTicketDAO busticket=jdbi.onDemand(BusTicketDAO.class);
 	void addBuslist(int busNo, String busName, String busSource, String busDestination, String clazz) throws Exception {
-		busticket.addBuslist(busNo, busName, busSource, busDestination, clazz);
+		busticket.addBuslist(busName, busSource, busDestination, clazz);
 	}
 
 	void deleteBuslist(int busNo) throws Exception {
