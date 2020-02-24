@@ -19,8 +19,8 @@ public class TestUserRegister {
 		obj.setPassword(sc.next());
 		System.out.println("Enter the mobileNumber:");
 		obj.setContactNumber(sc.nextLong());
-		System.out.println("Enter the UserId:");
-		obj.setUserId(sc.nextInt());
+		//System.out.println("Enter the UserId:");
+		//obj.setUserId(sc.nextInt());
 
 		impl.newUserRegister(obj);
 

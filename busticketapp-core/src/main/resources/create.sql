@@ -89,6 +89,15 @@ user_id number unique,
 constraint user_id_ck check (user_id>=100)
 );
 
+insert into User_register(name,Email_id,password,contact,user_id)
+values('siva','siva@gmail.com','siva123',9999585734,123);
+insert into User_register(name,Email_id,password,contact,user_id)
+values('chinraj','chinraj044@gmail.com','chinraj',9524009574,111);
+insert into User_register(name,Email_id,password,contact,user_id)
+values('vijay','vijay@gmail.com','vijay123',9876543110,100);
+insert into User_register(name,Email_id,password,contact,user_id)
+values('sanjay','sajay@gmail.com','1234',9876543210,101);
+
 
 create or replace view bus_list_view as 
 select bl.bus_no,bl.bus_name,bl.bus_source,bl.bus_destination,bl.class,bt.amount,bt.departure_time,bt.arrival_time,bs.total_seats, bs.total_seats as available_seats

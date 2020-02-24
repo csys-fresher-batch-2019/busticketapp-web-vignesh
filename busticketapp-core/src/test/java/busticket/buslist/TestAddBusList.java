@@ -11,8 +11,8 @@ public class TestAddBusList {
 	public static void main(String[] args) throws Exception{
 		Logger logger=Logger.getInstance();
 		Scanner sc = new Scanner(System.in);
-		logger.input("Enter the BusNo:");
-		int busNo = sc.nextInt();
+		//logger.input("Enter the BusNo:");
+		//int busNo = sc.nextInt();
 		
 		logger.input("Enter the Busname:");
 		String busName = sc.next();
@@ -30,7 +30,7 @@ public class TestAddBusList {
 		BusTicketManagerImplimentation busimpl=new BusTicketManagerImplimentation();
 		//Busimpl.addBuslist(1244,"abcd","kovai","madurai","sleeper");
 		
-		busimpl.addBuslist(busNo,busName,busSource,busDestination,clazz);
+		busimpl.addBuslist(busName,busSource,busDestination,clazz);
 		
 	}
 

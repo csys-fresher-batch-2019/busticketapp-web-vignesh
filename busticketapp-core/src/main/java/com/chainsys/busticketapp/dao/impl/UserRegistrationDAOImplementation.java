@@ -15,7 +15,7 @@ public class UserRegistrationDAOImplementation implements UserRegistrationDAO {
 	UserRegistration obj = new UserRegistration();
 	Logger logger=Logger.getInstance();
 	public void newUserRegister(UserRegistration obj) throws Exception {
-		String sql = "insert into User_register(name,Email_id,password,contact,user_id) values(?,?,?,?,?)";
+		String sql = "insert into User_register(name,Email_id,password,contact,user_id) values(?,?,?,?,user_id.nextval)";
 		logger.debug(sql);
 		try(Connection con = ConnectionUtil.getConnection();){
 				try(PreparedStatement pst = con.prepareStatement(sql);){
@@ -23,7 +23,7 @@ public class UserRegistrationDAOImplementation implements UserRegistrationDAO {
 		pst.setString(2, obj.getEmailId());
 		pst.setString(3, obj.getPassword());
 		pst.setLong(4, obj.getContactNumber());
-		pst.setInt(5, obj.getUserId());
+		//pst.setInt(5, obj.getUserId());
 		int row = pst.executeUpdate();
 		logger.info(row);
 		}

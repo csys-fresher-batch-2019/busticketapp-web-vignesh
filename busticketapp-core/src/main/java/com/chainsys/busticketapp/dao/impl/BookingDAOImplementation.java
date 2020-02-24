@@ -46,10 +46,12 @@ public class BookingDAOImplementation implements BookingDAO {
 		
 	}
 		catch (Exception e) {
+			e.printStackTrace();
 			throw new DBException(ErrorMessages.NO_DATA_FOUND);
 		}
 		}
 		catch (Exception e) {
+			e.printStackTrace();
 			throw new DBException(ErrorMessages.CONNECTION_FAILURE);
 		}
 	

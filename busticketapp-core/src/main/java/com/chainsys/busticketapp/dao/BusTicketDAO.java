@@ -11,7 +11,7 @@ import com.chainsys.busticketapp.model.ListOfBuses;
 public interface BusTicketDAO {
 	
 	@SqlUpdate("insert into bus_list (bus_no,bus_name,bus_source,bus_destination,class)values(?,?,?,?,?)")
-	void addBuslist(int busNo, String busName, String busSource, String busDestination, String clazz) throws Exception;
+	void addBuslist(String busName, String busSource, String busDestination, String clazz) throws Exception;
 
 	void deleteBuslist(int busNo) throws Exception;
 

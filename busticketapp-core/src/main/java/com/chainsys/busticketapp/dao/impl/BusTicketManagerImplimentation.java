@@ -31,20 +31,20 @@ public class BusTicketManagerImplimentation implements BusTicketDAO {
 
 	Logger logger = Logger.getInstance();
 
-	public void addBuslist(int busNo, String busName, String busSource, String busDestination, String clazz)
+	public void addBuslist(String busName, String busSource, String busDestination, String clazz)
 			throws Exception {
-		String sql = "insert into bus_list (bus_no,bus_name,bus_source,bus_destination,class)values(?,?,?,?,?)";
+		String sql = "insert into bus_list (bus_no,bus_name,bus_source,bus_destination,class)values(bus_no_seq.nextval,?,?,?,?)";
 
 		try (Connection con = ConnectionUtil.getConnection();) {
 			try (PreparedStatement pst = con.prepareStatement(sql);) {
 
 				logger.debug(sql);
 
-				pst.setInt(1, busNo);
-				pst.setString(2, busName);
-				pst.setString(3, busSource);
-				pst.setString(4, busDestination);
-				pst.setString(5, clazz);
+				//pst.setInt(1, busNo);
+				pst.setString(1, busName);
+				pst.setString(2, busSource);
+				pst.setString(3, busDestination);
+				pst.setString(4, clazz);
 				int row = pst.executeUpdate();
 				logger.info(row);
 
